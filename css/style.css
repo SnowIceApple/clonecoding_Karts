@@ -12,8 +12,13 @@ body{
 
 .container{
     width: 100%;
+    height: 100%;
     box-sizing: border-box;
     padding: 0 40px 0 130px;
+}
+
+:root{
+    --main_color_red-: #cc0000;
 }
 
 /* logo */
@@ -98,6 +103,13 @@ body{
     opacity: 0;
     visibility: hidden;
     z-index: 9999;
+    transition: all .5s;
+}
+
+.hr_util.active .hr_util_background{
+    transform: translateX(0);
+    opacity: 1;
+    visibility: visible;
 }
 
 /* visual */
@@ -112,4 +124,67 @@ body{
 
 .visual{
     width: 100%;
+    height: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: flex-end;
+}
+
+.visual_txt{
+    font-size: 80px;
+    margin-bottom: 100px;
+}
+
+.visual_txt h2 strong{
+    display: block;
+    font-weight: 600;
+    letter-spacing: -2.5px;
+    margin: 10px 0;
+}
+
+.visual_txt h2 strong:first-child{
+    color: var(--main_color_red-);
+}
+
+/* main_section */
+
+#main_section{
+    width: 100%;
+}
+
+.main_section{
+    width: 100%;
+}
+
+.main_section_divider{
+    width: 100%;
+    padding-top: 170px;
+}
+
+.main_section_list{
+    width: 100%;
+}
+
+.msl_tit{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    color: #000;
+    padding-bottom: 25px;
+}
+
+.msl_tit h2{
+    font-size: 24px;
+    font-weight: 600;
+    letter-spacing: -1px;
+}
+
+.msl_tit a{
+    font-weight: 600;
+}
+
+.msl_tit a:hover{
+    color: var(--main_color_red-);
 }
