@@ -606,7 +606,7 @@ a.school-slide-bullet-active{
 }
 
 .school_slide_tit h3,
-.school_slide_tit ul li em{
+.school_slide_tit ul li h4{
     position: relative;
     display: block;
     color: #fff;
