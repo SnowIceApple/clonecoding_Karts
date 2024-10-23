@@ -92,3 +92,15 @@ input[type="search"]{
 	text-indent: -9999px;
 	color: transparent;
 }
+
+input::-ms-clear,
+input::-ms-reveal{
+    display:none;
+}
+
+input::-webkit-search-decoration,
+input::-webkit-search-cancel-button,
+input::-webkit-search-results-button,
+input::-webkit-search-results-decoration{
+    display:none;
+}
