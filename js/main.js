@@ -58,16 +58,12 @@ $(document).ready(function(){
 
     $(window).on('scroll', function(){
         var bgAnchor = 100;
-        if($(window).scrollTop() >= $('#karts_sns').offset().top - bgAnchor){
+        if($(window).scrollTop() >= $('#karts_sns').offset().top - bgAnchor || $(window).scrollTop() >= $('.school_slide_tit ul li.active a').offset().top){
             $('#schools').addClass('view_bg');
         }
-        else{
+        if(($(window).scrollTop() <= $('#karts_sns').offset().top - bgAnchor)){
             $('#schools').removeClass('view_bg');
         }
-        if($(window).scrollTop() >= $('.school_slide_tit a').offset().top){
-            $('#schools').removeClass('view_bg');
-        }
-
     });
 
 
@@ -77,8 +73,7 @@ $(document).ready(function(){
         direction: 'horizontal',
         loop: true,
         slidesPerView: 1,
-        speed: 1,
-    
+        speed: 100,
         pagination: {
             el: '.school-slide-pagination',
             bulletClass: "school-slide-bullet",
