@@ -61,7 +61,7 @@ $(document).ready(function(){
         if($(window).scrollTop() >= $('#karts_sns').offset().top - bgAnchor || $(window).scrollTop() >= $('.school_slide_tit ul li.active a').offset().top){
             $('#schools').addClass('view_bg');
         }
-        if(($(window).scrollTop() <= $('#karts_sns').offset().top - bgAnchor)){
+        else{
             $('#schools').removeClass('view_bg');
         }
     });
