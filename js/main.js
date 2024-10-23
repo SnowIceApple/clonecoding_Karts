@@ -22,9 +22,9 @@ $(document).ready(function(){
         }
     });
 
-    var bgAnchor = 100;
 
     $(window).on('scroll', function(){
+        var bgAnchor = 100;
         if($(window).scrollTop() >= $('#karts_sns').offset().top - bgAnchor){
             $('#schools').addClass('view_bg');
         }
