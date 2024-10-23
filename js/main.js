@@ -31,6 +31,10 @@ $(document).ready(function(){
         else{
             $('#schools').removeClass('view_bg');
         }
+        if($(window).scrollTop() >= $('.school_slide_tit a').offset().top){
+            $('#schools').removeClass('view_bg');
+        }
+
     });
 
 
