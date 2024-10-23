@@ -21,9 +21,31 @@ body{
     --main_color_red-: #e60039;
 }
 
+::selection{
+    background: var(--main_color_red-);
+    color: #fff;
+}
+
 .hv_red:hover .red_text{
     color: var(--main_color_red-);
 }
+
+.line_ani_box{
+    position: relative;
+    padding-top: 35px;
+}
+
+.line_ani_box::before{
+    display: block;
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 10px;
+    background: #000;
+}
+
 
 /* logo */
 
@@ -56,6 +78,7 @@ body{
 #header{
     position: fixed;
     top: 35px;
+    right: 0;
     width: 100%;
     transition: all .5s;
     z-index: 200;
@@ -248,7 +271,7 @@ body{
 }
 
 .visual_txt h2 strong:first-child{
-    color: var(--main_color_red-);
+    color: #ff0000;
 }
 
 /* section */
@@ -286,13 +309,20 @@ section:not(#visual){
 }
 
 .basic_tit h2{
+    position: relative;
+    z-index: 2;
     font-size: 24px;
     font-weight: 700;
     letter-spacing: -1px;
+    pointer-events: all;
 }
 
 .basic_tit a{
     font-weight: 600;
+}
+
+.basic_tit a:hover{
+    color: var(--main_color_red-);
 }
 
 .el_tit a:hover{
@@ -318,10 +348,9 @@ section:not(#visual){
     position: relative;
     width: 100%;
     box-sizing: border-box;
-    padding-top: 35px;
 }
 
-.el_box a{
+.over_link{
     position: absolute;
     left: 0;
     right: 0;
@@ -331,15 +360,6 @@ section:not(#visual){
     width: 100%;
     height: 100%;
     z-index: 2;
-}
-
-.el_deco{
-    position: absolute;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 10px;
-    background: #000;
 }
 
 .el_pic{
@@ -356,4 +376,254 @@ section:not(#visual){
     line-height: 1.3;
     letter-spacing: -0.5px;
     color: #000;
+}
+
+.el_box .el_date{
+    font-weight: 600;
+    color: var(--main_color_red-);
+}
+
+/* public_info */
+
+.public_info{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.info_list{
+    width: calc(50% - 20px);
+}
+
+.info_list_box{
+    width: 100%;
+}
+
+.info_list_box ul{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.info_list_box ul li{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: calc(50% - 20px);
+    padding-bottom: 15px;
+}
+
+.info_list_date{
+    padding: 0 12px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    flex-direction: column;
+}
+
+.info_list_date *{
+    color: #a5a5a5;
+}
+
+.info_list_date em{
+    font-size: 28px;
+    font-weight: 600;
+    letter-spacing: -0.5px;
+    line-height: 1.1;
+}
+
+.info_list_date span{
+    font-size: 17px;
+    font-weight: 600;
+}
+
+.info_list_desc{
+    flex: 1;
+    box-sizing: border-box;
+    padding-left: 15px;
+}
+
+.info_list_desc p{
+    color: #000;
+    font-size: 21px;
+    line-height: 1.3;
+    font-weight: 500;
+}
+
+/* schools */
+
+.schools{
+    position: relative;
+    width: 100%;
+    height: 100vh;
+}
+
+.schools .basic_tit{
+    position: relative;
+}
+
+.schools .basic_tit h2{
+    transition: all 0.7s ease;
+}
+
+.view_bg .basic_tit h2{
+    color: #fff;
+}
+
+.school_bg{
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.7s ease;
+    z-index: -2;
+    background: #000;
+}
+
+.view_bg .school_bg{
+    opacity: 1;
+    visibility: visible;
+}
+
+.sch_bg_img{
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-position: center !important;
+    background-size: cover !important;
+    background-repeat: no-repeat;
+    opacity: 0;
+    visibility: hidden;
+}
+
+.sch_bg_img.active{
+    opacity: 1;
+    visibility: visible;
+    transition: all 2s ease;
+}
+
+.sch_bg_img:first-child{
+    background-image: url('../img/7a5a60cb-9bd4-49b0-85f1-df7d9301ead2_resize.jpg');
+}
+
+.sch_bg_img:nth-child(2){
+    background-image: url('../img/d37532b8-a5b4-40e3-95f5-0f30cdbbcb8e_resize.jpg');
+}
+
+.sch_bg_img:nth-child(3){
+    background-image: url('../img/b9180fe9-58c5-4320-903d-211ee1dd5149_resize.jpg');
+}
+
+.sch_bg_img:nth-child(4){
+    background-image: url('../img/b939ab96-4da3-46ec-9559-b9d09a823cc6_resize.jpg');
+}
+
+.sch_bg_img:nth-child(5){
+    background-image: url('../img/78cea322-da2f-4877-84a7-3ad1f553c237_resize.jpg');
+}
+
+.sch_bg_img:last-child{
+    background-image: url('../img/8c65c286-914b-421e-b05a-f4fa66bdad9f_resize.jpg');
+}
+
+.school_slide_box{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    z-index: 3;
+}
+
+.school-slide-pagination{
+    position: absolute;
+    left: 0;
+    top: 140px;
+    width: max-content !important;
+    height: max-content !important;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    gap: 25px 0;
+    z-index: 3;
+}
+
+.school-slide-pagination a{
+    display: inline-block;
+    width: max-content;
+    color: #000;
+    opacity: 0.6;
+    transition: all 0.5s ease;
+    font-size: 21px;
+    font-weight: 600;
+}
+
+.view_bg .school-slide-pagination a{
+    color: #fff;
+}
+
+a.school-slide-bullet-active{
+    opacity: 1;
+}
+
+.school-slide-pagination a:hover{
+    opacity: 1;
+}
+
+.school-slide-pagination a:hover{
+    opacity: 1;
+}
+
+.school_slide{
+    width: 100%;
+    height: 100%;
+}
+
+.school_slide_tit{
+    position: absolute;
+    left: 50%;
+    top: 175px;
+    transform: translateX(-50%);
+    display: flex;
+    flex-direction: column;
+    width: max-content;
+    z-index: 3;
+    pointer-events: none;
+}
+
+.school_slide_tit ul li{
+    display: none;
+    text-align: center;
+}
+
+.school_slide_tit ul li.active{
+    display: block;
+}
+
+.school_slide_tit h3,
+.school_slide_tit ul li em{
+    position: relative;
+    display: block;
+    color: #fff;
+    font-size: 48px;
+    font-weight: 600;
+    text-align: center;
+    line-height: 1.5;
+    user-select: none;
+    pointer-events: none;
+}
+
+.school_slide_tit a{
+    position: relative;
+    display: inline-block;
+    padding: 15px 0;
+    color: #fff;
+    margin-top: 30px;
+    font-weight: 600;
+    pointer-events: all;
+    z-index: 2;
 }

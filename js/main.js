@@ -21,4 +21,43 @@ $(document).ready(function(){
             $('body').removeClass('overZero');
         }
     });
+
+    var bg_anchor = 100;
+
+    $(window).on('scroll', function(){
+        if($(window).scrollTop() >= $('#karts_sns').offset().top - bg_anchor){
+            $('#schools').addClass('view_bg');
+        }
+        else{
+            $('#schools').removeClass('view_bg');
+        }
+    });
+
+
+    const schoolMenu = ['Music', 'Drama', 'Film, TV & Multimedia','Dance', 'Visual Arts', 'Korean Traditional Arts'];
+
+    const swiper1 = new Swiper('.school_slide', {
+        direction: 'horizontal',
+        loop: true,
+        slidesPerView: 1,
+        speed: 1,
+    
+        pagination: {
+            el: '.school-slide-pagination',
+            bulletClass: "school-slide-bullet",
+            bulletActiveClass: "school-slide-bullet-active",
+            clickable: true,
+            renderBullet: function (index, className) {
+                return '<a href="#" class="' + className + '">' + (schoolMenu[index]) + '</a>';
+            },
+        },
+
+        on:{
+            slideChange: function(){
+                var idx = this.realIndex;
+                $('.sch_bg_img').eq(idx).addClass('active').siblings().removeClass('active');
+                $('.school_slide_tit ul li').eq(idx).addClass('active').siblings().removeClass('active');
+            }
+        },
+      });
 });
