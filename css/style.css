@@ -581,6 +581,7 @@ a.school-slide-bullet-active{
 .school_slide{
     width: 100%;
     height: 100%;
+    overflow-x: hidden;
 }
 
 .school_slide_tit{
