@@ -22,10 +22,10 @@ $(document).ready(function(){
         }
     });
 
-    var bg_anchor = 100;
+    var bgAnchor = 100;
 
     $(window).on('scroll', function(){
-        if($(window).scrollTop() >= $('#karts_sns').offset().top - bg_anchor){
+        if($(window).scrollTop() >= $('#karts_sns').offset().top - bgAnchor){
             $('#schools').addClass('view_bg');
         }
         else{
