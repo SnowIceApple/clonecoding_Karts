@@ -30,11 +30,12 @@ body{
 .logo_box{
     position: fixed;
     left: 40px;
-    top: 0;
+    top: 0px;
     margin-top: 45px;
     width: 50px;
     height: calc(100vh - 80px);
     z-index: 100;
+    transition: all .5s ease;
 }
 
 .logo_box::before{
@@ -54,9 +55,9 @@ body{
 
 #header{
     position: fixed;
-    top: 45px;
+    top: 35px;
     width: 100%;
-    transition: all .7s;
+    transition: all .5s;
     z-index: 200;
 }
 
@@ -69,12 +70,50 @@ body{
     align-items: center;
 }
 
+.header::after{
+    display: block;
+    content: "";
+    position: absolute;
+    right: 0;
+    bottom: -45px;
+    width: 100%;
+    height: 10px;
+    background: #000;
+    transition: all .5s ease;
+    transform-origin: top;
+}
+
 .main_logo{
     position: absolute;
     left: 0;
     top: 50%;
     transform: translateY(-50%);
 }
+
+/* overZero header */
+
+.overZero .logo_box{
+    margin-top: 35px;
+    height: calc(100vh - 70px);
+}
+
+.overZero #header{
+    top: 25px;
+}
+
+.overZero .header::after{
+    transform: scaleY(0);
+}
+
+.overZero .main_logo{
+    display: none;
+}
+
+.overZero .hr_util_background{
+}
+
+/* end overZero */
+
 
 .main_logo a{
     display: block;
@@ -108,21 +147,19 @@ body{
 .hr_util_background{
     position: fixed;
     left: 0;
-    right: 0;
     top: 0;
-    bottom: 0;
     transform: translateX(-100%);
-    width: 100%;
-    height: 100%;
+    width: 100vw;
+    height: 100vh;
     background-color: #000;
     background-image: url('../img/allmenu_bg.gif');
     background-repeat: no-repeat;
-    background-size: auto 90%;
+    background-size: auto calc(100% - 110px);
     background-position: left top;
     opacity: 0;
     visibility: hidden;
     z-index: 9999;
-    padding: 50px 60px;
+    padding: 80px 60px;
     box-sizing: border-box;
     transition: all .5s ease;
 }

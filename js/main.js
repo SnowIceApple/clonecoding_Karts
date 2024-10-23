@@ -12,4 +12,13 @@ $(document).ready(function(){
             $(this).closest('.hr_util').removeClass('active');
         });
     });
+
+    $(window).on('scroll', function(){
+        if($(window).scrollTop() > 0){
+            $('body').addClass('overZero');
+        }
+        else{
+            $('body').removeClass('overZero');
+        }
+    });
 });
