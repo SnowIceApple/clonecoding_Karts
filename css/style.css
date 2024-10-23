@@ -48,7 +48,7 @@ body{
     background: #000;
 }
 
-.logo a{
+.min_logo a{
     display: block;
 }
 
@@ -69,18 +69,18 @@ body{
     align-items: center;
 }
 
-.txt_logo{
+.main_logo{
     position: absolute;
     left: 0;
     top: 50%;
     transform: translateY(-50%);
 }
 
-.txt_logo a{
+.main_logo a{
     display: block;
 }
 
-.txt_logo a img{
+.main_logo a img{
     max-width: 100%;
 }
 
