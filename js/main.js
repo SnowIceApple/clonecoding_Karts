@@ -55,15 +55,22 @@ $(document).ready(function(){
         }
     });
 
+    var lastScroll = 0;
 
     $(window).on('scroll', function(){
+        var nowScroll = $(this).scrollTop();
         var bgAnchor = 100;
-        if($(window).scrollTop() >= $('#karts_sns').offset().top - bgAnchor || $(window).scrollTop() >= $('.school_slide_tit ul li.active a').offset().top){
+
+        if(lastScroll >= $('.karts_sns').offset().top - bgAnchor){
             $('#schools').addClass('view_bg');
         }
         else{
             $('#schools').removeClass('view_bg');
         }
+        if(nowScroll > lastScroll && lastScroll >= $('.school_slide_tit ul li.active a').offset().top){
+            $('#schools').removeClass('view_bg');
+        }
+        lastScroll = nowScroll;
     });
 
 

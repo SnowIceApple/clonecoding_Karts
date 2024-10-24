@@ -627,7 +627,7 @@ section:not(#visual){
 /* sns_box */
 
 .sns_box{
-    height: 100px;
+    height: 160px;
 }
 
 /* schools */
@@ -806,4 +806,35 @@ a.school-slide-bullet-active{
     font-weight: 600;
     pointer-events: all;
     z-index: 2;
+}
+
+/* glance */
+
+.glance_info_list{
+    width: 100%;
+    height: 600px;
+}
+
+.glance_info_list ul{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    box-sizing: border-box;
+}
+
+.glance_info_list ul li{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.gil_img{
+    width: 100px;
+}
+
+.gil_txt{
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: column;
+    max-width: 100%;
 }
