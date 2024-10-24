@@ -58,7 +58,7 @@ $(document).ready(function(){
     var lastScroll = 0;
     var bgAnchor = 100;
 
-    $(window).on('scroll', function(){
+    $(window).on('scroll load', function(){
         var nowScroll = $(this).scrollTop();
 
         if(lastScroll >= $('.karts_sns').offset().top - bgAnchor){
