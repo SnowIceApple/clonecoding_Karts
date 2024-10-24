@@ -56,10 +56,10 @@ $(document).ready(function(){
     });
 
     var lastScroll = 0;
+    var bgAnchor = 100;
 
     $(window).on('scroll', function(){
         var nowScroll = $(this).scrollTop();
-        var bgAnchor = 100;
 
         if(lastScroll >= $('.karts_sns').offset().top - bgAnchor){
             $('#schools').addClass('view_bg');
