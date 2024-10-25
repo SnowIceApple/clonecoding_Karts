@@ -973,3 +973,67 @@ a.school-slide-bullet-active{
     color: var(--main_color_red-);
 }
 
+.footer_info{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.footer_logo{
+    width: 20%;
+    box-sizing: border-box;
+    padding-right: 30px;
+}
+
+.footer_logo a{
+    display: block;
+    margin-bottom: 60px;
+}
+
+.copyright{
+    font-size: 16px;
+    letter-spacing: 0.5px;
+    color: #b4b4b4;
+    line-height: 1.5;
+}
+
+.footer_address{
+    width: 80%;
+}
+
+.footer_address ul{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.footer_address ul li{
+    width: 25%;
+    box-sizing: border-box;
+    padding-right: 30px;
+}
+
+.footer_address ul li address{
+}
+
+.footer_address ul li address em{
+    font-size: 19px;
+    font-weight: 700;
+    line-height: 1.4;
+}
+
+.footer_address ul li address p{
+    margin-top: 8px;
+    line-height: 1.5;
+    font-size: 17px;
+    font-weight: 600;
+}
+
+.footer_address ul li:last-child address p{
+    margin-top: 0px;
+}
+
+.footer_address ul li:last-child address p:nth-child(2){
+    margin-top: 25px;
+}
