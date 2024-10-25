@@ -61,15 +61,17 @@ $(document).ready(function(){
     $(window).on('scroll load', function(){
         var nowScroll = $(this).scrollTop();
 
-        if(lastScroll >= $('.karts_sns').offset().top - bgAnchor){
+
+        if($(window).scrollTop() > $('.karts_sns').offset().top - bgAnchor){
             $('#schools').addClass('view_bg');
         }
         else{
             $('#schools').removeClass('view_bg');
         }
-        if(nowScroll > lastScroll && lastScroll >= $('.school_slide_tit ul li.active a').offset().top){
+        if($('.school_slide_tit ul li.active a').offset().top < lastScroll){
             $('#schools').removeClass('view_bg');
         }
+
         lastScroll = nowScroll;
     });
 
