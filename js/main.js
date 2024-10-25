@@ -100,4 +100,25 @@ $(document).ready(function(){
             }
         },
       });
+
+      $('.footer_logo button').on('click', function(){
+        $(this).toggleClass('active');
+        $('.footer_address').toggleClass('active');
+        if($('.footer_address').hasClass('active')){
+            $('.footer_address').stop().slideDown(300);
+        }
+        else{
+            $('.footer_address').stop().slideUp(300);
+        }
+      });
+
+      $(window).on('resize', function(){
+        if($(window).outerWidth() >= 1280){
+            $('.footer_address').show();
+            $('.footer_logo button, .footer_address').removeClass('active');
+        }
+        else{
+            $('.footer_address').hide();
+        }
+      });
 });

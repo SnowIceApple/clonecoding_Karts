@@ -942,6 +942,24 @@ a.school-slide-bullet-active{
     color: var(--main_color_red-);
 }
 
+.go_top_arrow{
+    display: block;
+    width: 15px;
+    height: 18px;
+    margin-left: 15px;
+    margin-top: 3px;
+    background: url('../img/uiset.png');
+    background-position: -13px -18px;
+    opacity: 0.3;
+    transition: all .3s ease;
+}
+
+.go_up a:focus .go_top_arrow,
+.go_up a:hover .go_top_arrow{
+    opacity: 1;
+    background-position: -39px -18px;
+}
+
 .footer_link{
     width: 100%;
     margin: 25px 0 50px 0;
@@ -973,6 +991,8 @@ a.school-slide-bullet-active{
     color: var(--main_color_red-);
 }
 
+
+
 .footer_info{
     width: 100%;
     display: flex;
@@ -980,15 +1000,25 @@ a.school-slide-bullet-active{
     justify-content: space-between;
 }
 
-.footer_logo{
+.footer_left{
     width: 20%;
     box-sizing: border-box;
     padding-right: 30px;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+}
+
+.footer_logo{
+    margin-bottom: 60px;
+}
+
+.footer_logo img:nth-child(2){
+    display: none;
 }
 
 .footer_logo a{
     display: block;
-    margin-bottom: 60px;
 }
 
 .copyright{

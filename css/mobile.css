@@ -1,0 +1,118 @@
+
+@media all and (max-width: 1280px){
+
+    section:not(#visual){
+        margin-top: 90px;
+    }
+
+    .elc_list > li{
+        width: calc(50% - 22.5px);
+        margin-bottom: 40px;
+    }
+
+    .info_list{
+        width: 100%;
+        margin-bottom: 40px;
+    }
+
+    .glance_info_list ul li{
+        width: calc(50% - 22.5px);
+        margin-bottom: 40px;
+    }
+
+    .ebook_list ul li{
+        width: calc(50% - 22.5px);
+        margin-bottom: 40px;
+    }
+
+    #footer{
+        margin: 30px 0 80px 0;
+    }
+
+    .footer_link ul{
+        gap: 1px;
+    }
+
+    .footer_link ul li{
+        flex: none;
+        width: calc((100% / 3) - 1px);
+    }
+
+    .footer_logo img:nth-child(1){
+        display: none;
+    }
+
+    .footer_logo img:nth-child(2){
+        display: block;
+    }
+
+    .footer_info{
+        position: relative;
+    }
+
+    .footer_left{
+        width: 100%;
+    }
+
+    .footer_logo{
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        flex-direction: row;
+        margin-bottom: 25px;
+    }
+
+    .footer_logo a{
+        width: max-content;
+    }
+
+    .footer_logo a img{
+        width: 125px;
+    }
+
+    .footer_logo button{
+        position: relative;
+        transform: rotate(180deg);
+        width: 20px;
+        height: 25px;
+        background: url('../img/arr_top.png') center no-repeat;
+        background-size: contain;
+        margin-left: 10px;
+    }
+
+    .footer_logo button.active{
+        transform: rotate(0deg);
+    }
+
+    .footer_address{
+        display: none;
+        position: absolute;
+        left: 0;
+        bottom: calc(100% + 20px);
+        width: 100%;
+        background: #fff;
+        box-sizing: border-box;
+        border: 5px solid #000;
+        padding: 30px 15px;
+        z-index: 3;
+    }
+
+    .footer_address ul li{
+        width: 100%;
+        padding-right: 0px;
+        margin-bottom: 20px;
+    }
+
+    .footer_address ul li:last-child{
+        margin-bottom: 0px;
+    }
+
+    .footer_address ul li address em{
+        font-size: 17px;
+    }
+
+    .footer_address ul li address p{
+        font-size: 16px;
+    }
+
+}
