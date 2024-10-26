@@ -104,10 +104,6 @@ body{
     transition: all .5s ease;
 }
 
-.overZero .header{
-    padding-bottom: 40px;
-}
-
 .header::after{
     display: block;
     content: "";
@@ -118,7 +114,7 @@ body{
     height: 10px;
     background: #000;
     transition: all .3s;
-    transform-origin: bottom;
+    transform-origin: top;
 }
 
 .main_logo{
@@ -129,17 +125,9 @@ body{
 
 /* overZero header */
 
-.overZero .logo_box{
-    margin-top: 35px;
-    height: calc(100vh - 70px);
-}
-
-.overZero #header{
-    top: 25px;
-}
 
 .overZero .header::after{
-    height: 0;
+    transform: scaleY(0);
 }
 
 .overZero .main_logo{
@@ -724,20 +712,23 @@ section:not(#visual){
     z-index: 3;
 }
 
-.school-slide-pagination{
+.pagination_box{
     position: absolute;
     left: 0;
-    top: 140px;
+    bottom: calc(100% - 400px) !important;
+    z-index: 3;
+}
+
+.school-slide-pagination{
     width: max-content !important;
     height: max-content !important;
     display: flex;
     flex-wrap: wrap;
     flex-direction: column;
     gap: 25px 0;
-    z-index: 3;
 }
 
-.school-slide-pagination a{
+.school-slide-pagination button{
     display: inline-block;
     width: max-content;
     color: #000;
@@ -747,19 +738,19 @@ section:not(#visual){
     font-weight: 600;
 }
 
-.view_bg .school-slide-pagination a{
+.view_bg .school-slide-pagination button{
     color: #fff;
 }
 
-a.school-slide-bullet-active{
+button.school-slide-bullet-active{
     opacity: 1;
 }
 
-.school-slide-pagination a:hover{
+.school-slide-pagination button:hover{
     opacity: 1;
 }
 
-.school-slide-pagination a:hover{
+.school-slide-pagination button:hover{
     opacity: 1;
 }
 

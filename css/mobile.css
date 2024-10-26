@@ -116,3 +116,137 @@
     }
 
 }
+
+@media all and (min-width: 768px){
+    .overZero .logo_box{
+        margin-top: 35px;
+        height: calc(100vh - 70px);
+    }
+
+    .overZero #header{
+        top: 25px;
+    }
+    
+    .overZero .header{
+        padding-bottom: 40px;
+    }
+
+}
+
+@media all and (max-width: 768px){
+
+    .container{
+        padding: 0 20px 0 60px;
+    }
+
+    .logo_box{
+        left: 15px;
+        width: 28px;
+        margin-top: 25px;
+        height: calc(100vh - 60px);
+    }
+
+    .min_logo{
+        width: max-content;
+    }
+
+    .min_logo a{
+        width: max-content;
+    }
+
+    .min_logo a img{
+        height: 15px;
+    }
+
+    .logo_box::before{
+        width: 6px;
+        top: 8px;
+    }
+
+    .main_logo{
+        display: none;
+    }
+
+    #header{
+        top: 20px;
+    }
+
+    .header{
+        padding-bottom: 20px;
+    }
+
+    .header::after{
+        height: 5px;
+    }
+
+    .hr_util > a{
+        width: 30px;
+        height: 30px;
+    }
+
+    .hr_util > a img{
+        width: 20px;
+    }
+
+    .visual_txt h2 strong{
+        font-size: 28px;
+        letter-spacing: -1px;
+    }
+
+    .elc_list > li{
+        width: 100%;
+    }
+
+    .el_pic img{
+        width: 100%;
+    }
+
+    .el_desc{
+        margin: 20px 0 10px 0;
+    }
+
+    .el_desc h3{
+        font-size: 21px;
+    }
+
+    .el_box .el_date{
+        font-size: 18px;
+    }
+
+    .info_list_box ul{
+        gap: 30px 0;
+    }
+
+    .info_list_box ul li{
+        width: 100%;
+    }
+
+    .pagination_box{
+        width: 100% !important;
+        overflow-x: scroll;
+        bottom: 30px !important;
+    }
+
+    .school-slide-pagination{
+        width: auto !important;
+        height: auto !important;
+        white-space: nowrap;
+        flex-wrap: nowrap;
+        flex-direction: row;
+    }
+
+    .school-slide-pagination button{
+        padding: 0 20px;
+        margin-bottom: 25px;
+        font-size: 17px;
+    }
+
+    .school_slide_tit{
+        top: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    .school_slide_tit h3, .school_slide_tit ul li h4{
+        font-size: 22px;
+    }
+}

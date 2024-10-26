@@ -74,7 +74,7 @@ $(document).ready(function(){
         lastScroll = nowScroll;
     });
 
-
+    var pagiScroll = $('.pagination_box');
     const schoolMenu = ['Music', 'Drama', 'Film, TV & Multimedia','Dance', 'Visual Arts', 'Korean Traditional Arts'];
 
     const swiper1 = new Swiper('.school_slide', {
@@ -82,24 +82,37 @@ $(document).ready(function(){
         loop: true,
         slidesPerView: 1,
         speed: 100,
-        pagination: {
-            el: '.school-slide-pagination',
-            bulletClass: "school-slide-bullet",
-            bulletActiveClass: "school-slide-bullet-active",
-            clickable: true,
-            renderBullet: function (index, className) {
-                return '<a href="#" class="' + className + '">' + (schoolMenu[index]) + '</a>';
-            },
-        },
+        // pagination: {
+        //     el: '.school-slide-pagination',
+        //     bulletClass: "school-slide-bullet",
+        //     bulletActiveClass: "school-slide-bullet-active",
+        //     clickable: true,
+        //     renderBullet: function (index, className) {
+        //         return '<a href="#" class="' + className + '">' + (schoolMenu[index]) + '</a>';
+        //     },
+        // },
 
         on:{
             slideChange: function(){
                 var idx = this.realIndex;
                 $('.sch_bg_img').eq(idx).addClass('active').siblings().removeClass('active');
                 $('.school_slide_tit ul li').eq(idx).addClass('active').siblings().removeClass('active');
-            }
+                $('.school-slide-bullet').eq(idx).addClass('school-slide-bullet-active').siblings().removeClass('school-slide-bullet-active');
+                var posX = $('.school-slide-bullet').eq(idx).position().left;
+                pagiScroll.scrollLeft(pagiScroll.scrollLeft() + posX);
+            },
         },
       });
+
+      
+
+      $('.school-slide-bullet').on('click', function(){
+        swiper1.slideTo($(this).index() + 1);
+        var posX = $(this).position().left;
+        console.log(posX);
+        pagiScroll.scrollLeft(pagiScroll.scrollLeft() + posX);
+      });
+
 
       $('.footer_logo button').on('click', function(){
         $(this).toggleClass('active');
