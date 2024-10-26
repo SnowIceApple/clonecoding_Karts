@@ -188,6 +188,53 @@
         width: 20px;
     }
 
+    .hr_search .hr_util_background{
+        padding: 80px 0;
+    }
+
+    .search_area{
+        border-width: 6px;
+        margin-bottom: 15px;
+        padding-bottom: 15px;
+    }
+
+    #all_search_input{
+        font-size: 26px;
+        width: 85px;
+    }
+
+    #all_search_input.wide{
+        width: 210px;
+    }
+
+    .hr_menu .hr_util_background{
+        padding: 80px 30px;
+    }
+
+    .hr_util_top{
+        right: 32px;
+        top: 15px;
+    }
+
+    .hub_close{
+        height: 30px;
+    }
+
+    .hub_close button{
+        width: 30px;
+        height: 30px;
+        background-size: 26px;
+    }
+
+    #nav ul li a{
+        font-size: 21px;
+        padding: 12px 0 19px 0;
+    }
+
+    .search_example ul li a{
+        font-size: 17px;
+    }
+
     .visual_txt h2 strong{
         font-size: 28px;
         letter-spacing: -1px;
@@ -224,7 +271,7 @@
     .pagination_box{
         width: 100% !important;
         overflow-x: scroll;
-        bottom: 30px !important;
+        bottom: 50px !important;
     }
 
     .school-slide-pagination{
@@ -249,4 +296,83 @@
     .school_slide_tit h3, .school_slide_tit ul li h4{
         font-size: 22px;
     }
+
+    .glance_info_list ul li{
+        width: 100%;
+    }
+
+    .gil_img{
+        width: 60px;
+        background-image: url('../img/new_icon_m.png');
+        background-size: 200px;
+    }
+
+    .glance_info_list ul li:nth-child(1) .gil_img{
+        background-position: 0 0;
+    }
+
+    .glance_info_list ul li:nth-child(2) .gil_img{
+        background-position: -100px 0px;
+    }
+
+    .glance_info_list ul li:nth-child(3) .gil_img{
+        background-position: 0 -100px;
+    }
+
+    .glance_info_list ul li:nth-child(4) .gil_img{
+        background-position: -100px 0px;
+    }
+
+    .gil_txt em{
+        font-size: 21px;
+        margin-bottom: 12px;
+    }
+
+    .gil_txt span{
+        font-size: 16px;
+    }
+
+    .ebook_list ul li{
+        width: 100%;
+    }
+
+    .ebook_img img{
+        width: 100%;
+    }
+
+    #footer{
+        margin: 40px 0 60px 0;
+    }
+
+    .go_up{
+        justify-content: flex-start;
+    }
+
+    .go_up a{
+        font-size: 20px;
+        padding: 0;
+    }
+
+    .go_top_arrow{
+        margin-left: 7px;
+        margin-top: 0px;
+    }
+
+    .footer_link ul li a{
+        padding: 20px 0;
+        font-size: 14px;
+    }
+
+    .footer_link ul li{
+        width: calc(50% - 0.5px);
+    }
+
+    .footer_logo a img{
+        width: 90px;
+    }
+
+    .footer_logo button{
+        width: 14px;
+    }
+
 }
