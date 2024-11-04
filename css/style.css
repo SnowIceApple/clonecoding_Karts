@@ -303,7 +303,10 @@ body{
 }
 
 .search_example ul{
+    width: 100%;
     display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
     flex-direction: row;
     gap: 0 6px;
 }
