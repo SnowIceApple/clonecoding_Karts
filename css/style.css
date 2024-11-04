@@ -8,6 +8,7 @@ body{
 }
 
 #wrap{
+    position: relative;
     width: 100%;
 }
 
@@ -87,7 +88,7 @@ body{
 #header{
     position: fixed;
     top: 38px;
-    right: 0;
+    left: 0;
     width: 100%;
     transition: all .5s;
     z-index: 200;
@@ -95,7 +96,6 @@ body{
 
 .header{
     position: relative;
-    width: 100%;
     display: flex;
     flex-wrap: wrap;
     justify-content: flex-end;
