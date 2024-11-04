@@ -102,6 +102,7 @@ body{
     align-items: center;
     padding-bottom: 40px;
     transition: all .5s ease;
+    box-sizing: border-box;
 }
 
 .header::after{
