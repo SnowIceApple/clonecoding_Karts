@@ -658,6 +658,7 @@ section:not(#visual){
     transition: all 0.7s ease;
     z-index: -2;
     background: #000;
+    overflow: hidden;
 }
 
 .view_bg .school_bg{
