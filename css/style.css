@@ -1,6 +1,7 @@
 html, body{
     font-family: "neue-haas-grotesk-display", sans-serif;
     scroll-behavior: smooth;
+    overflow-x: hidden;
 }
 
 body{
@@ -10,7 +11,7 @@ body{
 #wrap{
     position: relative;
     width: 100%;
-    max-width: 100%:
+    max-width: 100%;
     overflow-x: hidden;
 }
 
